@@ -4,20 +4,22 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+import Footer from '../components/Footer.astro';
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-veryDarkBlue">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description">
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="./favicon-32x32.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="bg-veryDarkBlue h-screen">
 		<slot />
+		<Footer />
 	</body>
 </html>
 <style is:global>
